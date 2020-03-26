@@ -17,4 +17,4 @@ RUN npm install
 COPY . ${WORK}
 
 EXPOSE 8080
-CMD [ "node", "index.js" ]
+CMD [ "npm", "start" ]
