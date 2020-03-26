@@ -1,4 +1,4 @@
-FROM node
+FROM node:10
 
 # Create app directory
 ENV WORK=/data/
