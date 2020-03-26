@@ -1,0 +1,14 @@
+{
+  "name": "estonia-latest-addresses",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "latest",
+    "jsonstore.io": "0.1.0",
+    "request": "^2.88.2"
+  }
+}
