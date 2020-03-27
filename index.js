@@ -19,6 +19,9 @@ app.get('/', (req, res) => {
     var item = body.filter(function(i){return i.vvnr == 1 && !("kov" in i);});
     url = url + item[0].fail;
     console.log(url);
+    res.set({
+      'Content-Type': 'application/zip'
+    });
     request(url).pipe(res);
   })
 });
