@@ -11,7 +11,7 @@ const HOST = '0.0.0.0';
 const app = express();
 
 async function fetch_data() {
-  return (await got('https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%0Aarea%283600079510%29-%3E.searchArea%3B%0A%28%0A%20%20node%5B%22amenity%22%3D%22parking%22%5D%5B%22park_ride%22%3D%22yes%22%5D%28area.searchArea%29%3B%0A%20%20way%5B%22amenity%22%3D%22parking%22%5D%5B%22park_ride%22%3D%22yes%22%5D%28area.searchArea%29%3B%0A%20%20relation%5B%22amenity%22%3D%22parking%22%5D%5B%22park_ride%22%3D%22yes%22%5D%28area.searchArea%29%3B%0A%20%20node%5B%22amenity%22%3D%22bicycle_parking%22%5D%28area.searchArea%29%3B%0A%20%20way%5B%22amenity%22%3D%22bicycle_parking%22%5D%28area.searchArea%29%3B%0A%20%20relation%5B%22amenity%22%3D%22bicycle_parking%22%5D%28area.searchArea%29%3B%0A%29%3B%0Aconvert%20item%20%3A%3A%3D%3A%3A%2C%3A%3Ageom%3Dgeom%28%29%2C_osm_type%3Dtype%28%29%3B%0Aout%20geom%3B', {responseType: 'json', resolveBodyOnly: true}));
+  return (await got('https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A25%5D%3B%0Aarea(3600079510)-%3E.searchArea%3B%0A(%0A%20%20node%5B%22amenity%22%3D%22parking%22%5D%5B%22park_ride%22%3D%22yes%22%5D(area.searchArea)%3B%0A%20%20way%5B%22amenity%22%3D%22parking%22%5D%5B%22park_ride%22%3D%22yes%22%5D(area.searchArea)%3B%0A%20%20relation%5B%22amenity%22%3D%22parking%22%5D%5B%22park_ride%22%3D%22yes%22%5D(area.searchArea)%3B%0A%20%20node%5B%22amenity%22%3D%22bicycle_parking%22%5D(area.searchArea)%3B%0A%20%20way%5B%22amenity%22%3D%22bicycle_parking%22%5D(area.searchArea)%3B%0A%20%20relation%5B%22amenity%22%3D%22bicycle_parking%22%5D(area.searchArea)%3B%0A)%3B%0Aout%20body%3B%0A%3E%3B%0Aout%20skel%20qt%3B', {responseType: 'json', resolveBodyOnly: true}));
 }
 
 function getNow() {
